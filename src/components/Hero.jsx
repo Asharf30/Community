@@ -56,6 +56,16 @@ const Header = () => {
       }
     }
   }, [isMenuOpen]);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 770) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className=" h-[780px] fixed top-0 left-0 right-0 ">
@@ -69,31 +79,31 @@ const Header = () => {
           <div className="hidden min-[770px]:flex  items-center gap-8">
             <a
               href="#home"
-              className="font-semibold text-[#171A31] hover:text-primary transition-colors"
+              className="relative font-semibold text-[#171A31] hover:text-primary transition-all duration-300 hover:-translate-y-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left after:transition-transform after:duration-300"
             >
               Home
             </a>
             <a
               href="#about"
-              className="font-semibold text-[#171A31] hover:text-primary transition-colors"
+              className="relative font-semibold text-[#171A31] hover:text-primary transition-all duration-300 hover:-translate-y-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left after:transition-transform after:duration-300"
             >
               About Us
             </a>
             <a
               href="#portfolio"
-              className="font-semibold text-[#171A31] hover:text-primary transition-colors"
+              className="relative font-semibold text-[#171A31] hover:text-primary transition-all duration-300 hover:-translate-y-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left after:transition-transform after:duration-300"
             >
               How it works
             </a>
             <a
               href="#services"
-              className="font-semibold text-[#171A31] hover:text-primary transition-colors"
+              className="relative font-semibold text-[#171A31] hover:text-primary transition-all duration-300 hover:-translate-y-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left after:transition-transform after:duration-300"
             >
               Services
             </a>
             <a
               href="#contact"
-              className="font-semibold text-[#171A31] hover:text-primary transition-colors"
+              className="relative font-semibold text-[#171A31] hover:text-primary transition-all duration-300 hover:-translate-y-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left after:transition-transform after:duration-300"
             >
               Contact
             </a>
@@ -102,13 +112,13 @@ const Header = () => {
           <div className="flex items-center gap-5">
             {/* Desktop Login Button */}
             <div className="hidden min-[770px]:block">
-              <button className="flex justify-center items-center rounded-[10px] text-white bg-primary px-8 py-2">
+              <button className="flex cursor-pointer justify-center items-center rounded-[10px] text-white bg-primary px-8 py-2 hover:opacity-90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 active:scale-95">
                 Login
               </button>
             </div>
             {/* Mobile Menu Toggle */}
             <button
-              className="min-[770px]:hidden text-2xl text-primary cursor-pointer z-50"
+              className="min-[770px]:hidden text-2xl text-primary cursor-pointer z-50 hover:scale-110 transition-transform duration-300 active:scale-90 "
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <IoCloseOutline /> : <TfiMenuAlt />}
@@ -119,51 +129,53 @@ const Header = () => {
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className="min-[770px]:hidden absolute left-0 right-0 top-[100px] z-40 flex flex-col items-center gap-5 py-6 bg-white/95 backdrop-blur-md rounded-xl shadow-lg mx-4"
+          className="max-[770px]:hidden absolute left-0 right-0 top-[100px] z-[100] flex flex-col items-center py-4 bg-white rounded-2xl shadow-2xl mx-4 border border-gray-100 overflow-hidden"
           style={{ display: "none" }}
         >
           <a
             href="#home"
             onClick={() => setIsMenuOpen(false)}
-            className="font-semibold text-[#171A31]"
+            className="w-full text-center py-3 font-semibold text-[#171A31] hover:bg-primary/5 hover:text-primary transition-colors duration-300 border-b border-gray-50"
           >
             Home
           </a>
           <a
             href="#about"
             onClick={() => setIsMenuOpen(false)}
-            className="font-semibold text-[#171A31]"
+            className="w-full text-center py-3 font-semibold text-[#171A31] hover:bg-primary/5 hover:text-primary transition-colors duration-300 border-b border-gray-50"
           >
             About Us
           </a>
           <a
             href="#portfolio"
             onClick={() => setIsMenuOpen(false)}
-            className="font-semibold text-[#171A31]"
+            className="w-full text-center py-3 font-semibold text-[#171A31] hover:bg-primary/5 hover:text-primary transition-colors duration-300 border-b border-gray-50"
           >
             How it works
           </a>
           <a
             href="#services"
             onClick={() => setIsMenuOpen(false)}
-            className="font-semibold text-[#171A31]"
+            className="w-full text-center py-3 font-semibold text-[#171A31] hover:bg-primary/5 hover:text-primary transition-colors duration-300 border-b border-gray-50"
           >
             Services
           </a>
           <a
             href="#contact"
             onClick={() => setIsMenuOpen(false)}
-            className="font-semibold text-[#171A31]"
+            className="w-full text-center py-3 font-semibold text-[#171A31] hover:bg-primary/5 hover:text-primary transition-colors duration-300"
           >
             Contact
           </a>
 
-          <button
-            className="mt-2 w-[80%] flex justify-center items-center rounded-[10px] text-white bg-primary px-8 py-3 font-semibold"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Login
-          </button>
+          <div className="w-full px-6 mt-4 mb-2">
+            <button
+              className="w-full flex justify-center items-center rounded-[10px] text-white bg-primary px-8 py-3 font-semibold hover:shadow-xl hover:-translate-y-1 transition-all duration-300 active:scale-95"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Login
+            </button>
+          </div>
         </div>
         <div className=" relative z-50 items-start top-[135px]  flex">
           <div>
@@ -192,12 +204,20 @@ const Header = () => {
                 </p>
               </div>
             </div>
-            <div className="pt-10 ">
-              <button className="py-5 w-50 bg-primary rounded-[15px] text-white mr-10">
+            <div className="pt-10 flex flex-wrap gap-4">
+              <button
+                className="py-4 px-8 bg-primary rounded-[15px] text-white font-semibold 
+    hover:bg-[#1a7acc] hover:shadow-lg hover:-translate-y-1 
+    transition-all duration-300 active:scale-95 cursor-pointer"
+              >
                 GET A FAST QUOTE
               </button>
-              <button className="py-5 w-50 bg-secondary text-white rounded-[15px]">
-                {" "}
+
+              <button
+                className="py-4 px-8 bg-secondary text-white rounded-[15px] font-semibold 
+    hover:bg-[#7a4fd4] hover:shadow-lg hover:-translate-y-1 
+    transition-all duration-300 active:scale-95 cursor-pointer"
+              >
                 Contact Us
               </button>
             </div>
