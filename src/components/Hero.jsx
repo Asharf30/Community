@@ -7,6 +7,7 @@ import home3 from "../assets/home 3.png";
 import home4 from "../assets/home 4.png";
 import home5 from "../assets/home 5.png";
 import home6 from "../assets/home 6.png";
+import { TfiMenuAlt } from "react-icons/tfi";
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
           <div className="">
             <img src={headerLogo} alt="" className="min-w-[200px]" />
           </div>
-          <div className=" capitalize flex gap-10 md:gap-10 text-[14px] font-semibold text-[#171A31]">
+          <div className="  capitalize max-[900px]:hidden flex gap-10 md:gap-10 text-[14px] font-semibold text-[#171A31]">
             <a href="#home">home</a>
             <a href="#about">about us </a>
             <a href="#portfolio">How it works</a>
