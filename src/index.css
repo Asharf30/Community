@@ -5,10 +5,10 @@
 
   --color-primary: #2e91e2;
   --color-secondary: #9866eb;
-  --color-background: #f8fdff;
-  --color-background-secondary: #f6f6ff;
+  --color-background: #ffffff;
+  --color-background-secondary: #f8fdff;
   --color-heading: #0f147f;
-  --color-body-text: #4a4e6d;
+  --color-body-primary: #4A4E6D;
 }
 
 @layer base {
