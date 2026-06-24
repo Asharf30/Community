@@ -8,8 +8,13 @@ import home4 from "../assets/home 4.png";
 import home5 from "../assets/home 5.png";
 import home6 from "../assets/home 6.png";
 import { TfiMenuAlt } from "react-icons/tfi";
+import { IoCloseOutline } from "react-icons/io5"; // أيقونة الإغلاق
+
+import { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className=" h-[780px] fixed top-0 left-0 right-0 ">
       <Container>
@@ -17,13 +22,51 @@ const Header = () => {
           <div className="">
             <img src={headerLogo} alt="" className="min-w-[200px]" />
           </div>
-          <div className="  capitalize max-[900px]:hidden flex gap-10 md:gap-10 text-[14px] font-semibold text-[#171A31]">
-            <a href="#home">home</a>
-            <a href="#about">about us </a>
-            <a href="#portfolio">How it works</a>
-            <a href="#services">services</a>
-            <a href="#contact">contact</a>
-          </div>
+          {isMenuOpen && (
+            <div className="min-[770px]:hidden relative z-50 flex flex-col items-center  gap-5 py-6 bg-white rounded-xl shadow-lg mt-4">
+              <a
+                href="#home"
+                onClick={() => setIsMenuOpen(false)}
+                className="font-semibold text-[#171A31]"
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                onClick={() => setIsMenuOpen(false)}
+                className="font-semibold text-[#171A31]"
+              >
+                About Us
+              </a>
+              <a
+                href="#portfolio"
+                onClick={() => setIsMenuOpen(false)}
+                className="font-semibold text-[#171A31]"
+              >
+                How it works
+              </a>
+              <a
+                href="#services"
+                onClick={() => setIsMenuOpen(false)}
+                className="font-semibold text-[#171A31]"
+              >
+                Services
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="font-semibold text-[#171A31]"
+              >
+                Contact
+              </a>
+            </div>
+          )}
+          <button
+            className="min-[770px]:hidden text-2xl text-primary cursor-pointer"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <IoCloseOutline /> : <TfiMenuAlt />}
+          </button>
           <div>
             <button className="  top-0 right-0 flex justify-center  items-center rounded-[10px] text-white bg-primary px-8 py-2 ">
               Login
@@ -71,7 +114,7 @@ const Header = () => {
             <img
               src={home1}
               alt=""
-              className="  absolute  right-[-50px]  -top-[50px] w-[450px] max-w-[40vw] "
+              className="  max-[900px]:hidden absolute  right-[-50px]  -top-[50px] w-[450px] max-w-[40vw] "
             />
           </div>
         </div>
