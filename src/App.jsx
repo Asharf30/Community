@@ -1,15 +1,11 @@
-import React from 'react'
-import Container from './components/Container'
+import React from "react";
+import Header from "./components/Header";
 const App = () => {
   return (
-    
     <div>
-      <Container>
-        <h1 className="py-6">Hello world!</h1>
-      </Container>
-      
-      </div>
-  )
-}
+      <Header />
+    </div>
+  );
+};
 
-export default App
+export default App;

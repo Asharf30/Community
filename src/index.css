@@ -2,21 +2,22 @@
 
 @theme {
   --font-sans: "Poppins", system-ui, sans-serif;
-  
-  --color-primary: #2E91E2;
-  --color-secondary: #9866EB;
-  --color-background: #F8FDFF;
-  --color-background-secondary: #F6F6FF;
-  --color-heading: #0F147F;
-  --color-body-text: #4A4E6D;
+
+  --color-primary: #2e91e2;
+  --color-secondary: #9866eb;
+  --color-background: #f8fdff;
+  --color-background-secondary: #f6f6ff;
+  --color-heading: #0f147f;
+  --color-body-text: #4a4e6d;
 }
 
 @layer base {
-  body {
-    @apply bg-background text-body-text antialiased;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-heading font-bold;
   }
 }
