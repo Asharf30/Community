@@ -11,9 +11,10 @@ import home6 from "../assets/home 6.png";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoCloseOutline } from "react-icons/io5"; // أيقونة الإغلاق
 
-const Header = () => {
+const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     if (menuRef.current) {
@@ -56,6 +57,7 @@ const Header = () => {
       }
     }
   }, [isMenuOpen]);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 770) {
@@ -67,8 +69,17 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    gsap.to(imageRef.current, {
+      y: 20,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+  }, []);
   return (
-    <div className=" h-[780px] fixed top-0 left-0 right-0 ">
+    <div className=" h-[780px] top-0 left-0 right-0 bottom-0 relative bg-[#F8FDFF] overflow-hidden">
       <Container>
         <div className="top-10 z-50 relative flex justify-between items-center gap-5">
           <div className="">
@@ -225,6 +236,7 @@ const Header = () => {
           <div>
             <img
               src={home1}
+              ref={imageRef}
               alt=""
               className="  max-[900px]:hidden absolute  right-[-50px]  -top-[50px] w-[450px] max-w-[40vw] "
             />
@@ -249,4 +261,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Hero;
