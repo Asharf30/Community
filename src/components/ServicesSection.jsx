@@ -6,8 +6,8 @@ import Mold from "../assets/Landing Page Template (Community) (1)/Rectangle 4414
 
 const ServicesSection = () => {
   return (
-    <Container>
       <div className="pt-20 pb-20 min-[1050px]:pb-40">
+    <Container>
         <h1 className="text-[50px] font-bold  text-center ">
           Learn About Our Restoration Services
         </h1>
@@ -61,8 +61,8 @@ const ServicesSection = () => {
             More Services
           </button>
         </div>
-      </div>
     </Container>
+      </div>
   );
 };
 
