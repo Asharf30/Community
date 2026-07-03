@@ -6,6 +6,7 @@ import ReviewSection from "./components/ReviewSection";
 import RestorationServices from "./components/RestorationServices";
 import ProcessSection from "./components/ProcessSection";
 import PlanSection from "./components/PlanSection";
+import Question from "./components/Question";
 const App = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const App = () => {
       <RestorationServices />
       <ProcessSection />
       <PlanSection />
+      <Question />
     </div>
   );
 };
