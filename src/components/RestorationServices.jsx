@@ -32,7 +32,7 @@ const RestorationServices = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="mt-16 sm:mt-24 pb-16 min-h-screen bg-white overflow-hidden">
+    <section id="services" className="mt-16 sm:mt-24 pb-16 min-h-screen bg-white overflow-hidden">
       {/* Header Banner */}
       <div className="bg-gradient-to-r from-[#5961F9] via-[#636CFB] to-[#4A54F1] py-16 sm:py-20 md:py-24 relative shadow-lg">
         <Container>

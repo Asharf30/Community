@@ -55,7 +55,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="min-h-[1250px] bg-[#F6F6FF]">
+    <div id="contact" className="min-h-[1250px] bg-[#F6F6FF]">
       <Container>
         <div className="pt-20 ">
           <h1 className="text-[50px] font-bold  text-center">

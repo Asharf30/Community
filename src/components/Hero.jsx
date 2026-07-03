@@ -79,7 +79,7 @@ const Hero = () => {
     });
   }, []);
   return (
-    <div className=" h-[780px] top-0 left-0 right-0 bottom-0 relative bg-[#F8FDFF] overflow-hidden">
+    <div id="home" className=" h-[780px] top-0 left-0 right-0 bottom-0 relative bg-[#F8FDFF] overflow-hidden">
       <Container>
         <div className="top-10 z-50 relative flex justify-between items-center gap-5">
           <div className="">
@@ -101,7 +101,7 @@ const Hero = () => {
               About Us
             </a>
             <a
-              href="#portfolio"
+              href="#how-it-works"
               className="relative font-semibold text-[#171A31] hover:text-primary transition-all duration-300 hover:-translate-y-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left after:transition-transform after:duration-300"
             >
               How it works
@@ -158,7 +158,7 @@ const Hero = () => {
             About Us
           </a>
           <a
-            href="#portfolio"
+            href="#how-it-works"
             onClick={() => setIsMenuOpen(false)}
             className="w-full text-center py-3 font-semibold text-[#171A31] hover:bg-primary/5 hover:text-primary transition-colors duration-300 border-b border-gray-50"
           >

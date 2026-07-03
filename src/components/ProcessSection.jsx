@@ -41,7 +41,7 @@ const ProcessSection = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="bg-gradient-to-b from-[#F6F6FF] via-[#F0F2FF] to-[#F6F6FF] py-20 md:py-28 relative overflow-hidden">
+    <section id="how-it-works" className="bg-gradient-to-b from-[#F6F6FF] via-[#F0F2FF] to-[#F6F6FF] py-20 md:py-28 relative overflow-hidden">
       {/* Decorative background animated blobs */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl animate-float pointer-events-none"></div>
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-300/20 rounded-full blur-3xl animate-float pointer-events-none" style={{ animationDelay: "2s" }}></div>

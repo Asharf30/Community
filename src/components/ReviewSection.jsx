@@ -77,7 +77,7 @@ const ReviewSection = () => {
   };
 
   return (
-    <div className="bg-[#F6F6FF] pt-20 pb-20 min-h-[800px]">
+    <div id="jobs" className="bg-[#F6F6FF] pt-20 pb-20 min-h-[800px]">
       <Container>
         {/* Header */}
         <div className="flex justify-center items-center flex-col gap-3 mb-12">
