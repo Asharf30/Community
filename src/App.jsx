@@ -5,6 +5,7 @@ import ServicesSection from "./components/ServicesSection";
 import ReviewSection from "./components/ReviewSection";
 import RestorationServices from "./components/RestorationServices";
 import ProcessSection from "./components/ProcessSection";
+import PlanSection from "./components/PlanSection";
 const App = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const App = () => {
       <ReviewSection />
       <RestorationServices />
       <ProcessSection />
+      <PlanSection />
     </div>
   );
 };
