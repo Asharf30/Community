@@ -6,7 +6,10 @@ const Footer = () => {
     <footer className="bg-[#0080FF] py-14 sm:py-16 text-white relative overflow-hidden">
       <Container>
         <div className="flex flex-col items-center justify-center gap-8 text-center">
-          <nav aria-label="Footer Navigation" className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 font-semibold text-sm sm:text-base tracking-wide">
+          <nav
+            aria-label="Footer Navigation"
+            className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 font-semibold text-sm sm:text-base tracking-wide"
+          >
             <a
               href="#home"
               className="hover:opacity-80 hover:-translate-y-0.5 transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-white after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left after:transition-transform after:duration-300"

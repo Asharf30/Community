@@ -41,9 +41,15 @@ const ProcessSection = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="how-it-works" className="bg-gradient-to-b from-[#F6F6FF] via-[#F0F2FF] to-[#F6F6FF] py-20 md:py-28 relative overflow-hidden">
+    <section
+      id="how-it-works"
+      className="bg-gradient-to-b from-[#F6F6FF] via-[#F0F2FF] to-[#F6F6FF] py-20 md:py-28 relative overflow-hidden"
+    >
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl animate-float pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-300/20 rounded-full blur-3xl animate-float pointer-events-none" style={{ animationDelay: "2s" }}></div>
+      <div
+        className="absolute bottom-10 right-10 w-80 h-80 bg-purple-300/20 rounded-full blur-3xl animate-float pointer-events-none"
+        style={{ animationDelay: "2s" }}
+      ></div>
 
       <Container>
         <div className="text-center mb-16 md:mb-24 flex flex-col gap-4 relative z-10 animate-fade-in">
@@ -70,8 +76,12 @@ const ProcessSection = () => {
                 } ${step.glowShadow}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className={`${step.headerBg} h-20 sm:h-24 flex items-center transition-colors duration-300`}>
-                  <div className={`${step.numBg} w-20 sm:w-24 h-full flex items-center justify-center text-white text-2xl sm:text-3xl font-black tracking-tighter shrink-0 transition-transform duration-300 group-hover:scale-110`}>
+                <div
+                  className={`${step.headerBg} h-20 sm:h-24 flex items-center transition-colors duration-300`}
+                >
+                  <div
+                    className={`${step.numBg} w-20 sm:w-24 h-full flex items-center justify-center text-white text-2xl sm:text-3xl font-black tracking-tighter shrink-0 transition-transform duration-300 group-hover:scale-110`}
+                  >
                     {step.number}
                   </div>
                   <div className="flex-1 px-4 sm:px-6 flex items-center justify-between">
@@ -84,7 +94,9 @@ const ProcessSection = () => {
                   </div>
                 </div>
 
-                <div className={`${step.bodyBg} p-8 sm:p-10 flex-1 flex flex-col justify-between transition-colors duration-300`}>
+                <div
+                  className={`${step.bodyBg} p-8 sm:p-10 flex-1 flex flex-col justify-between transition-colors duration-300`}
+                >
                   <p className="text-[#0F147F] font-semibold text-base sm:text-lg leading-relaxed text-center sm:text-left">
                     {step.description}
                   </p>

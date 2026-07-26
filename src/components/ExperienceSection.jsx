@@ -48,7 +48,10 @@ const ExperienceSection = () => {
   const [activeCard, setActiveCard] = useState(0);
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section
+      id="about"
+      className="py-20 md:py-28 bg-white relative overflow-hidden"
+    >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-100/40 via-purple-100/40 to-green-100/40 rounded-full blur-3xl pointer-events-none animate-float"></div>
 
       <Container>
@@ -108,7 +111,8 @@ const ExperienceSection = () => {
                 {experiences[activeCard].title} Guarantee Active
               </h4>
               <p className="text-sm font-medium text-body-primary mt-1">
-                Backed by our 100% satisfaction promise and certified local professionals.
+                Backed by our 100% satisfaction promise and certified local
+                professionals.
               </p>
             </div>
           </div>

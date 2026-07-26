@@ -33,8 +33,10 @@ const PlanSection = () => {
               </h2>
 
               <p className="text-white/90 text-base sm:text-lg font-medium leading-relaxed drop-shadow-sm">
-                True North Restoration of Dallas services th
-                e entire DFW area with our 24/7 restoration services. No matter what city you are located in, we can be there on average in 45-minutes or less. The following are some of the top cities we perform work in:
+                True North Restoration of Dallas services th e entire DFW area
+                with our 24/7 restoration services. No matter what city you are
+                located in, we can be there on average in 45-minutes or less.
+                The following are some of the top cities we perform work in:
               </p>
             </div>
 
@@ -51,9 +53,13 @@ const PlanSection = () => {
                         : "bg-white/10 text-white hover:bg-white/20 hover:translate-x-1 border border-white/10 hover:border-white/30"
                     }`}
                   >
-                    <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs transition-transform duration-300 group-hover:rotate-45 ${
-                      isSelected ? "bg-[#3091E8] text-white" : "bg-white/20 text-white"
-                    }`}>
+                    <span
+                      className={`w-6 h-6 rounded-full flex items-center justify-center text-xs transition-transform duration-300 group-hover:rotate-45 ${
+                        isSelected
+                          ? "bg-[#3091E8] text-white"
+                          : "bg-white/20 text-white"
+                      }`}
+                    >
                       ➔
                     </span>
                     <span>{city.name}</span>
