@@ -32,7 +32,10 @@ const RestorationServices = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section id="services" className="mt-16 sm:mt-24 pb-16 min-h-screen bg-white overflow-hidden">
+    <section
+      id="services"
+      className="mt-16 sm:mt-24 pb-16 min-h-screen bg-white overflow-hidden"
+    >
       {/* Header Banner */}
       <div className="bg-gradient-to-r from-[#5961F9] via-[#636CFB] to-[#4A54F1] py-16 sm:py-20 md:py-24 relative shadow-lg">
         <Container>
@@ -117,7 +120,7 @@ const RestorationServices = () => {
                 </svg>
               </button>
               <span className="text-sm sm:text-base font-semibold text-[#4A4E6D] flex items-center gap-2.5 px-4 py-2 bg-green-50 rounded-full border border-green-200">
-                <span className="w-3 h-3 rounded-full bg-green-500 inline-block animate-ping"></span>
+                <span className="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
                 <span>Live Tech On Call</span>
               </span>
             </div>
