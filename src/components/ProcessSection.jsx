@@ -42,12 +42,10 @@ const ProcessSection = () => {
 
   return (
     <section id="how-it-works" className="bg-gradient-to-b from-[#F6F6FF] via-[#F0F2FF] to-[#F6F6FF] py-20 md:py-28 relative overflow-hidden">
-      {/* Decorative background animated blobs */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl animate-float pointer-events-none"></div>
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-300/20 rounded-full blur-3xl animate-float pointer-events-none" style={{ animationDelay: "2s" }}></div>
 
       <Container>
-        {/* Section Header */}
         <div className="text-center mb-16 md:mb-24 flex flex-col gap-4 relative z-10 animate-fade-in">
           <p className="text-2xl md:text-3xl font-bold text-[#5961F9] tracking-wide uppercase">
             Our Process
@@ -58,7 +56,6 @@ const ProcessSection = () => {
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#38B6E3] via-[#E08532] to-[#8A33DF] mx-auto rounded-full mt-2 animate-pulse"></div>
         </div>
 
-        {/* 3 Step Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 relative z-10">
           {steps.map((step, index) => {
             const isSelected = activeStep === index;
@@ -73,13 +70,10 @@ const ProcessSection = () => {
                 } ${step.glowShadow}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                {/* Card Top Banner */}
                 <div className={`${step.headerBg} h-20 sm:h-24 flex items-center transition-colors duration-300`}>
-                  {/* Step Number Box */}
                   <div className={`${step.numBg} w-20 sm:w-24 h-full flex items-center justify-center text-white text-2xl sm:text-3xl font-black tracking-tighter shrink-0 transition-transform duration-300 group-hover:scale-110`}>
                     {step.number}
                   </div>
-                  {/* Step Title */}
                   <div className="flex-1 px-4 sm:px-6 flex items-center justify-between">
                     <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold leading-tight drop-shadow-sm">
                       {step.title}
@@ -90,13 +84,11 @@ const ProcessSection = () => {
                   </div>
                 </div>
 
-                {/* Card Body Content */}
                 <div className={`${step.bodyBg} p-8 sm:p-10 flex-1 flex flex-col justify-between transition-colors duration-300`}>
                   <p className="text-[#0F147F] font-semibold text-base sm:text-lg leading-relaxed text-center sm:text-left">
                     {step.description}
                   </p>
-                  
-                  {/* Interactive Footer Indicator */}
+
                   <div className="mt-8 pt-4 border-t border-black/5 flex items-center justify-between text-xs sm:text-sm font-bold text-[#0F147F]/70">
                     <span className="flex items-center gap-1.5 group-hover:text-[#0F147F] transition-colors">
                       <span>Step {step.number} of 03</span>
@@ -111,7 +103,6 @@ const ProcessSection = () => {
           })}
         </div>
 
-        {/* Animated Process Footer Bar */}
         <div className="mt-16 bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-md border border-gray-100 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left relative z-10 animate-fade-in">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#0F147F] text-white flex items-center justify-center font-bold text-lg shadow-inner shrink-0">

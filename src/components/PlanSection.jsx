@@ -18,7 +18,6 @@ const PlanSection = () => {
     <section className="py-20 md:py-28 bg-gradient-to-b from-white via-[#F8FDFF] to-white relative overflow-hidden">
       <Container>
         <div className="shadow-2xl rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 border border-blue-100 bg-white relative z-10 animate-fade-in">
-          {/* Left Column: Clean Static Map Image Without Overlays */}
           <div className="lg:col-span-6 relative min-h-[360px] sm:min-h-[450px] bg-slate-100 overflow-hidden">
             <img
               src={mapImage}
@@ -27,7 +26,6 @@ const PlanSection = () => {
             />
           </div>
 
-          {/* Right Column: Areas We Service Text & List */}
           <div className="lg:col-span-6 bg-[#3091E8] p-8 sm:p-12 lg:p-14 flex flex-col justify-between text-white relative">
             <div className="space-y-6 relative z-10">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-none drop-shadow-md">
@@ -40,7 +38,6 @@ const PlanSection = () => {
               </p>
             </div>
 
-            {/* Interactive Cities Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mt-8 relative z-10">
               {cities.map((city, idx) => {
                 const isSelected = selectedCity === idx;

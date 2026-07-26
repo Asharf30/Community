@@ -52,19 +52,16 @@ const ReviewSection = () => {
       time: "Just now",
       rating: formData.rating,
       text: formData.text.trim(),
-      isUserReview: true, // علشان نميزه بـ badge
+      isUserReview: true,
     };
 
-    // ③ احفظ في localStorage (بس الريفيوهات اللي اليوزر كتبها)
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
     const existing = saved ? JSON.parse(saved) : [];
     const updated = [newReview, ...existing];
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated));
 
-    // ④ حدّث الـ state عشان يظهر فوراً
     setReviews([...HARDCODED_REVIEWS, ...updated]);
 
-    // ⑤ Reset وأقفل الـ Modal
     setFormData({ name: "", rating: 5, text: "" });
     setFormError("");
     setIsModalOpen(false);
@@ -79,7 +76,6 @@ const ReviewSection = () => {
   return (
     <div id="jobs" className="bg-[#F6F6FF] pt-20 pb-20 min-h-[800px]">
       <Container>
-        {/* Header */}
         <div className="flex justify-center items-center flex-col gap-3 mb-12">
           <h2 className="text-3xl text-body-primary font-semibold text-center">
             Reviews
@@ -89,9 +85,7 @@ const ReviewSection = () => {
           </h1>
         </div>
 
-        {/* Review Widget */}
         <div className="bg-[#F8F9FB] rounded-xl overflow-hidden border border-gray-200 shadow-sm transition-shadow duration-500 hover:shadow-xl">
-          {/* Tabs */}
           <div className="flex flex-wrap border-b border-gray-200 bg-[#F1F3F6] px-5 py-4 gap-6 md:gap-10">
             <div className="flex items-center gap-2 font-bold text-gray-800 border-b-[3px] border-gray-800 pb-[18px] -mb-[18px] cursor-pointer">
               All Reviews <span className="font-semibold">5.0</span>
@@ -107,7 +101,6 @@ const ReviewSection = () => {
             </div>
           </div>
 
-          {/* Overall Rating */}
           <div className="px-5 md:px-8 py-6 bg-[#F1F3F6] flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-200 gap-4">
             <div>
               <h3 className="text-gray-700 text-lg font-semibold">
@@ -133,7 +126,6 @@ const ReviewSection = () => {
             </button>
           </div>
 
-          {/* Reviews Grid */}
           <div className="p-5 md:p-8 bg-white relative">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {reviews.map((review, index) => (
@@ -183,17 +175,15 @@ const ReviewSection = () => {
         </div>
       </Container>
 
-      {/* ===== MODAL ===== */}
       {isModalOpen && (
         <div
           className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4"
-          onClick={handleClose} // الضغط على الخلفية يقفل
+          onClick={handleClose}
         >
           <div
             className="bg-white rounded-2xl shadow-2xl w-full max-w-[500px] p-8 relative animate-[fadeInUp_0.3s_ease]"
-            onClick={(e) => e.stopPropagation()} // منع الإغلاق لو ضغطت جوا
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button
               onClick={handleClose}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-3xl transition-colors duration-200 cursor-pointer"
@@ -208,7 +198,6 @@ const ReviewSection = () => {
               Share your experience with us!
             </p>
 
-            {/* Name */}
             <div className="mb-4">
               <label className="block text-sm font-semibold text-gray-700 mb-1">
                 Your Name
@@ -224,7 +213,6 @@ const ReviewSection = () => {
               />
             </div>
 
-            {/* Rating Stars */}
             <div className="mb-4">
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Rating
@@ -246,7 +234,6 @@ const ReviewSection = () => {
               </div>
             </div>
 
-            {/* Review Text */}
             <div className="mb-4">
               <label className="block text-sm font-semibold text-gray-700 mb-1">
                 Your Review
@@ -262,12 +249,10 @@ const ReviewSection = () => {
               />
             </div>
 
-            {/* Error */}
             {formError && (
               <p className="text-red-500 text-sm mb-3">{formError}</p>
             )}
 
-            {/* Submit */}
             <button
               onClick={handleSubmit}
               className="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-[#1a7acc] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 active:scale-95 cursor-pointer"

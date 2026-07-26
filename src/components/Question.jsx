@@ -107,7 +107,6 @@ const Question = () => {
 
   return (
     <section className="bg-[#F5F5FC] py-20 md:py-28 relative overflow-hidden">
-      {/* Decorative ambient blobs */}
       <div className="absolute top-10 right-10 w-80 h-80 bg-blue-300/15 rounded-full blur-3xl pointer-events-none animate-float"></div>
       <div
         className="absolute bottom-10 left-10 w-80 h-80 bg-purple-300/15 rounded-full blur-3xl pointer-events-none animate-float"
@@ -115,26 +114,21 @@ const Question = () => {
       ></div>
 
       <Container>
-        {/* Title Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in relative z-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F147F] tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
 
-        {/* 2-Column Accordion Grid */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 relative z-10">
-          {/* Left Column */}
           <div className="flex flex-col gap-4 sm:gap-6">
             {faqsLeft.map(renderFaqCard)}
           </div>
-          {/* Right Column */}
           <div className="flex flex-col gap-4 sm:gap-6">
             {faqsRight.map(renderFaqCard)}
           </div>
         </div>
 
-        {/* Bottom CTA Button */}
         <div className="mt-12 sm:mt-16 text-center relative z-10 animate-scale-up">
           <button className="bg-[#3091E8] hover:bg-[#2079CD] text-white font-bold text-lg md:text-xl px-10 sm:px-14 py-4 sm:py-5 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 cursor-pointer inline-flex items-center gap-3 group">
             <span>More Questions</span>

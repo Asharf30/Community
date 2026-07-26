@@ -9,7 +9,7 @@ import home4 from "../assets/home 4.png";
 import home5 from "../assets/home 5.png";
 import home6 from "../assets/home 6.png";
 import { TfiMenuAlt } from "react-icons/tfi";
-import { IoCloseOutline } from "react-icons/io5"; // أيقونة الإغلاق
+import { IoCloseOutline } from "react-icons/io5";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +31,6 @@ const Hero = () => {
           },
         );
 
-        // Animate links inside
         gsap.fromTo(
           menuRef.current.children,
           { opacity: 0, y: -10 },
@@ -86,7 +85,6 @@ const Hero = () => {
             <img src={headerLogo} alt="" className="min-w-[200px]" />
           </div>
 
-          {/* Desktop Links */}
           <div className="hidden min-[770px]:flex  items-center gap-8">
             <a
               href="#home"
@@ -121,13 +119,11 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center gap-5">
-            {/* Desktop Login Button */}
             <div className="hidden min-[770px]:block">
               <button className="flex cursor-pointer justify-center items-center rounded-[10px] text-white bg-primary px-8 py-2 hover:opacity-90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 active:scale-95">
                 Login
               </button>
             </div>
-            {/* Mobile Menu Toggle */}
             <button
               className="min-[770px]:hidden text-2xl text-primary cursor-pointer z-50 hover:scale-110 transition-transform duration-300 active:scale-90 "
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -137,7 +133,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <div
           ref={menuRef}
           className="max-[770px]:hidden absolute left-0 right-0 top-[100px] z-[100] flex flex-col items-center py-4 bg-white rounded-2xl shadow-2xl mx-4 border border-gray-100 overflow-hidden"

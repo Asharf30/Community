@@ -49,11 +49,9 @@ const ExperienceSection = () => {
 
   return (
     <section id="about" className="py-20 md:py-28 bg-white relative overflow-hidden">
-      {/* Decorative background animation */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-100/40 via-purple-100/40 to-green-100/40 rounded-full blur-3xl pointer-events-none animate-float"></div>
 
       <Container>
-        {/* Section Header */}
         <div className="text-center mb-16 md:mb-24 relative z-10 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F147F] tracking-tight">
             The Sunshine Restoration Experience
@@ -61,7 +59,6 @@ const ExperienceSection = () => {
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#38B6E3] via-[#8A33DF] to-[#3BC15B] mx-auto rounded-full mt-4 animate-pulse"></div>
         </div>
 
-        {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
           {experiences.map((exp, idx) => {
             const isSelected = activeCard === idx;
@@ -74,7 +71,6 @@ const ExperienceSection = () => {
                 }`}
                 style={{ animationDelay: `${idx * 150}ms` }}
               >
-                {/* Circular White Icon Badge */}
                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white flex items-center justify-center p-3 sm:p-4 mb-6 shadow-md transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110 shrink-0">
                   <img
                     src={exp.image}
@@ -83,17 +79,14 @@ const ExperienceSection = () => {
                   />
                 </div>
 
-                {/* Card Title */}
                 <h3 className="font-extrabold text-lg sm:text-xl tracking-wide uppercase mb-4 drop-shadow">
                   {exp.title}
                 </h3>
 
-                {/* Card Description */}
                 <p className="text-white/95 text-sm sm:text-base font-medium leading-relaxed drop-shadow-sm flex-1">
                   {exp.description}
                 </p>
 
-                {/* Interactive Stat / Badge Footer */}
                 <div className="mt-6 pt-4 border-t border-white/20 w-full flex items-center justify-between text-xs font-bold uppercase tracking-wider">
                   <span>✨ {exp.stat}</span>
                   <span className="bg-white/20 px-2.5 py-1 rounded-full group-hover:bg-white group-hover:text-gray-900 transition-colors">
@@ -105,7 +98,6 @@ const ExperienceSection = () => {
           })}
         </div>
 
-        {/* Interactive Selected Feature Banner */}
         <div className="mt-16 bg-gradient-to-r from-[#F0F4FF] via-[#F8FDFF] to-[#F0F4FF] p-6 sm:p-8 rounded-2xl border border-blue-100 shadow-sm max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left relative z-10 animate-scale-up">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[#0F147F] text-white flex items-center justify-center font-bold text-2xl shrink-0 shadow-md">

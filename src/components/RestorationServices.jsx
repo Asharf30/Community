@@ -36,7 +36,6 @@ const RestorationServices = () => {
       id="services"
       className="mt-16 sm:mt-24 pb-16 min-h-screen bg-white overflow-hidden"
     >
-      {/* Header Banner */}
       <div className="bg-gradient-to-r from-[#5961F9] via-[#636CFB] to-[#4A54F1] py-16 sm:py-20 md:py-24 relative shadow-lg">
         <Container>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center tracking-tight drop-shadow animate-fade-in">
@@ -45,7 +44,6 @@ const RestorationServices = () => {
         </Container>
       </div>
 
-      {/* Tabs Navigation */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-8 sm:-mt-10 md:-mt-12 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 p-1.5 bg-white/40 md:bg-transparent backdrop-blur-md md:backdrop-blur-none rounded-2xl md:rounded-none shadow-lg md:shadow-none">
           {tabData.map((tab, index) => {
@@ -61,7 +59,6 @@ const RestorationServices = () => {
                 }`}
               >
                 <span>{tab.label}</span>
-                {/* Desktop active tab downward triangle */}
                 {isActive && (
                   <div className="hidden md:block absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-t-[14px] border-t-[#0F147F]"></div>
                 )}
@@ -71,13 +68,11 @@ const RestorationServices = () => {
         </div>
       </div>
 
-      {/* Tab Content Section */}
       <Container>
         <div
           key={activeTab}
           className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center py-12 md:py-20 animate-fade-in"
         >
-          {/* Image Column */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative group overflow-hidden rounded-2xl shadow-2xl bg-white p-3 border border-gray-100 transition-all duration-500 hover:shadow-blue-500/20 w-full max-w-lg lg:max-w-none">
               <img
@@ -93,7 +88,6 @@ const RestorationServices = () => {
             </div>
           </div>
 
-          {/* Text Column */}
           <div className="lg:col-span-7 space-y-6 animate-scale-up">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F147F] leading-snug tracking-tight flex items-start sm:items-center gap-3">
               <span className="w-2.5 h-8 sm:h-10 bg-[#5961F9] rounded-full inline-block shrink-0 mt-1 sm:mt-0 animate-pulse"></span>

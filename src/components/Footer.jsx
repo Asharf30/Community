@@ -6,7 +6,6 @@ const Footer = () => {
     <footer className="bg-[#0080FF] py-14 sm:py-16 text-white relative overflow-hidden">
       <Container>
         <div className="flex flex-col items-center justify-center gap-8 text-center">
-          {/* Navigation Links */}
           <nav aria-label="Footer Navigation" className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 font-semibold text-sm sm:text-base tracking-wide">
             <a
               href="#home"
@@ -46,7 +45,6 @@ const Footer = () => {
             </a>
           </nav>
 
-          {/* Social Icons */}
           <div className="flex items-center gap-5 mt-2">
             <a
               href="#facebook"
@@ -77,9 +75,8 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Copyright Text */}
           <div className="text-xs sm:text-sm font-medium text-white/80 tracking-wide">
-            © Copyright 2026 - Spectrum
+            © Copyright 2026 - Asharf
           </div>
         </div>
       </Container>
